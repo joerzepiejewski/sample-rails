@@ -80,6 +80,7 @@ test:
 #
 production:
   <<: *default
-  database: sample-rails-production
-  username: sample-rails
-  password: <%= ENV['SAMPLE-RAILS_DATABASE_PASSWORD'] %>
+  url: postgres://hciulkgtikruzx:w6nJG2hY7heALPYkPsDBI3zuMn@ec2-54-197-249-212.compute-1.amazonaws.com:5432/d5h4kdjn1l8hl3
+  # database: sample-rails-prod
+  # username: sample-rails
+  # password: <%= ENV['SAMPLE-RAILS_DATABASE_PASSWORD'] %>
