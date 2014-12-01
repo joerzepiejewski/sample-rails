@@ -43,3 +43,7 @@ gem 'unicorn'
 group :development, :test do
   gem "foreman"
 end
+
+group :test do
+	gem "minitest-reporters"
+end
