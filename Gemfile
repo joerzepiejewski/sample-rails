@@ -33,6 +33,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 # Use unicorn as the app server
 gem 'unicorn'
+gem 'bootstrap-sass'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -46,4 +47,6 @@ end
 
 group :test do
 	gem "minitest-reporters"
+  gem 'mini_backtrace'
+  gem 'guard-minitest'
 end
