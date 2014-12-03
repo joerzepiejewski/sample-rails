@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+
   get 'static_pages/home'
 
   get 'static_pages/help'
@@ -15,6 +17,14 @@ Rails.application.routes.draw do
   
   resources :users 
   
+  get     'login'   => 'sessions#new'
+  post    'login'   => 'sessions#create'
+  delete  'logout'  => 'sessions#destroy'  
+
+  namespace :api, defaults: {format: :json} do
+    post    'login'   => 'sessions#create'
+    delete  'logout'  => 'sessions#destroy'
+  end 
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
