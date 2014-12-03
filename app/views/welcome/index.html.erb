@@ -1,10 +1,14 @@
 <div class="center jumbotron">
-  <h1>Welcome to the Sample App</h1>
+  <h1>Scout Hackathon App</h1>
 
   <h2>
     This is the home page for the
-    Scout Hackathon sample application.
+    Scout Hackathon application.
   </h2>
 
+	<% if logged_in? %>
+	<h3>Good to see you <%= current_user.name %></h3>
+	<% else %>
   <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+  <% end %>
 </div>
